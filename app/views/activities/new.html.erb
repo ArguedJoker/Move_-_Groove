@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="bg-light shadow mt-5 border p-5">
+        <h2>Track Activity</h2>
+
+        <%= form_for :activity, url: activities_path do |f| %>
+
+          <div class="form-group">
+            <%= f.label :activity_name %><br/>
+            <%= f.select :activity_name, options_for_select(Activity::ACTIVITY_NAMES), {}, { class: 'form-control' } %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :activity_date %><br/>
+            <%= f.date_field :activity_date, autofocus: true, autocomplete: "date", class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :activity_duration %><br/>
+            <%= f.number_field :activity_duration, autofocus: true, autocomplete: "duration", min: '1', class: 'form-control' %>
+          </div>
+
+          <%= f.hidden_field :user_id, value: current_user.id %>
+
+          <div class="actions">
+            <%= f.submit "Track", class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

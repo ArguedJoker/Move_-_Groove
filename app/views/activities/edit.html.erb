@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="bg-light shadow mt-5 border p-5">
+        <h2>Edit Activity</h2>
+
+        <%= form_for(@activity) do |f| %>
+          <% if current_user.id === @activity.user_id %>
+            <div class="form-group">
+              <%= f.label :activity_name %><br/>
+              <%= f.select :activity_name, options_for_select(Activity::ACTIVITY_NAMES, @activity.activity_name), {}, { class: 'form-control' } %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :activity_date %><br/>
+              <%= f.date_field :activity_date, value: @activity.activity_date, autofocus: true, autocomplete: "date", class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :activity_duration %><br/>
+              <%= f.number_field :activity_duration, value: @activity.activity_duration, autofocus: true, autocomplete: "duration", min: '1', class: 'form-control' %>
+            </div>
+
+            <%= f.hidden_field :user_id, value: current_user.id %>
+
+            <div class="actions">
+              <%= f.submit "Update", class: 'btn btn-primary' %>
+            </div>
+          <% else %>
+            <div class="alert alert-warning" role="alert">I'm sorry but this page is not accessible.</div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

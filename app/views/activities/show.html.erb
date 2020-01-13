@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      
+        <div class="card mt-5">
+          <%= image_tag 'activity-image.jpeg', class: 'card-img-top', alt: 'Woman wearing orange sneakers while standing on the staircase' %>
+          <div class="p-3">
+            <p><b>Activity id</b>: <%= @activity.id %></p>
+            <p><b>Activity name</b>: <%= @activity.activity_name %></p>
+            <p><b>Date</b>: <%= @activity.activity_date %></p>
+            <p><b>Duration</b>: <%= @activity.activity_duration %></p>
+            <%= link_to "Edit", edit_activity_path(@activity), {class: 'btn btn-primary'} %> <%= link_to "Delete", @activity, {class: 'btn btn-danger', method: :delete, data: {confirm: "Are you sure?"}} %>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

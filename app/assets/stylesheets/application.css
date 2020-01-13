@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* General Homepage Style Changes */
+
+.jumbotron {
+    background-color: rgba(241, 238, 237, 0.63);
+    text-align: center;
+}
+
+.home-display {
+    padding: 10;
+    margin-top: auto;
+    margin-left: 175px;
+    margin-right: -175px;
+    margin: bottom: auto;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+.info {
+    text-align: justify;
+    color: black;
+}
+
+.home_video {
+    position: absolute;
+    object-fit: cover;
+    display: fixed;
+    top: 0;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+}
+
+.home-video-wrapper {
+    height: 100%;
+    display: flex;
+}
+
+/* Media Queries */
+

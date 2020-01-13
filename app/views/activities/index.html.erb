@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="d-flex justify-content-between mt-3 mb-3">
+    <h1>My Activities</h1>
+
+    <%= link_to "New Activity", new_activity_url, {class: 'btn btn-primary', style: 'height: 38px;'} %>
+  </div>
+  <% if user_signed_in? %>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Duration</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <% activities = @activities %>
+        <% activities.each_with_index do |activity, idx| %>
+          <% if current_user.id === activity.user_id %>
+            <td><%= activity.id %></td>
+            <td><%= link_to activity.activity_name, activity %> </td>
+            <td><%= activity.activity_date %></td>
+            <td><%= activity.activity_duration %></td>
+            <td><%= link_to "Edit", edit_activity_path(activity) %>
+              | <%= link_to "Delete", activity, method: :delete, data: {confirm: "Are you sure?"} %></td>
+            </tr>
+          <% end %>
+        <% end %>
+        </tbody>
+    </table>
+  <% else %>
+    <p>You need to be logged in to use this page. Please <%= link_to('login', new_user_session_path) %>
+      or <%= link_to('sign up', new_user_registration_path) %></p>
+  <% end %>
+</div>

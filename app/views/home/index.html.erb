@@ -3,14 +3,16 @@
     <div class="row">
       <div class="col-md-8">
       <div class="home-display">
+
+        <div class="home-video-wrapper .container-fluid">
+          <%= video_tag "run.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+        </div>
+
+        <div class="home-content .container-fluid">
           <h1 class="display-4">Welcome to Move and Groove!</h1>
           <p class="info"> According to the <a target="_blank" href="https://www.nhs.uk/live-well/exercise/">NHS</a>
           strong evidence shows a strong correlation between physical activity and reducing the risk of developing several diseases like type 2 diabetes, cancer and cardiovascular disease. Move & Groove is a great way to keep track of your daily physical activity and measure your performance. 
           </p>
-
-          <div class="home-video-wrapper">
-            <%= video_tag "run.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
-          </div>
 
           <% if !user_signed_in? %>
             <%= link_to('Login', new_user_session_path, role: 'button', class: 'btn btn-success btn-lg') %>

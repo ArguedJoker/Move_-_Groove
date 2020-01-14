@@ -24,9 +24,7 @@
 .home-display {
     padding: 10;
     margin-top: auto;
-    margin-left: 175px;
-    margin-right: -175px;
-    margin: bottom: auto;
+    margin-bottom: auto;
 }
 
 h1 {
@@ -40,14 +38,15 @@ h1 {
 }
 
 .home_video {
+    display: flex;
     position: absolute;
     object-fit: cover;
     display: fixed;
     top: 0;
     z-index: -2;
     transform: translate(-50%, -50%);
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 165vw;
+    min-height: 165vh;
     width: auto;
     height: auto;
 }
@@ -59,3 +58,88 @@ h1 {
 
 /* Media Queries */
 
+/* 
+    Extra small devices (portrait phones, less than 576px)
+    No media query since this is the default in Bootstrap
+   
+*/
+
+Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .home_video {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        display: fixed;
+        top: 0;
+        z-index: -2;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+    }
+
+    .home-video-wrapper {
+        height: 100%;
+        display: flex;
+    }
+}
+
+Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .home_video {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        display: fixed;
+        top: 0;
+        z-index: -2;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+    }
+
+    .home-video-wrapper {
+        height: 100%;
+        display: flex;
+    }
+}
+
+Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .home_video {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        display: fixed;
+        top: 0;
+        z-index: -2;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+    }
+
+    .home-video-wrapper {
+        height: 100%;
+        display: flex;
+    }
+}
+
+Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .home_video {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        display: fixed;
+        top: 0;
+        z-index: -2;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+    }
+
+    .home-video-wrapper {
+        height: 100%;
+        display: flex;
+    }
+}

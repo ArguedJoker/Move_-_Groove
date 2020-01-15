@@ -14,5 +14,8 @@
  *= require_self
  */
 
-
+body {
+    background: image-url('/gym.jpg');
+    background-position: cover !important;
+}
 

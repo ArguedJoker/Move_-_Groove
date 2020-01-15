@@ -3,13 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
  /* General Homepage Style Changes */
+body {
+    background-color: #ffffca;
+}
+
  .home-content{
      max-width: 100%;
      text-align: center;
      justify-content: center;
      height: auto;
-     margin-top: 10vh;
-     margin-left: 10vw;
+
+  
  }
 
  .jumbotron {
@@ -49,52 +53,45 @@
 
  .home-video-wrapper {
      height: 100%;
-     display: flex;
+     width: 100% !important; 
  }
 
-  /* Media Queries */
 
- /* 
-    Extra small devices (portrait phones, less than 576px)
-    No media query since this is the default in Bootstrap
-   
+/* FUTURE QUOTE BOX FEATURE
+
+ #quote {
+     color: white;
+ }
+
+.quoteBox {
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    height: auto;
+    font-family: "Times new roman";
+    padding: 20px 30px;
+}
+
+.quote {
+    font-size: 22px;
+}
+
+.author {
+    font-size: 18px;
+    font-style: italic;
+}
 */
 
- /*Small devices (landscape phones, 576px and up) */
- @media (min-width: 576px) {
+ // Media Queries
 
-     .home-video-wrapper {
-         display: hidden;
-     }
- }
+ @media only screen and (max-width: 600px) {
+    .display-4 {
+        font-size: 30px;
+    }
 
- /* Medium devices (tablets, 768px and up) */
- @media (min-width: 768px) {
-     .home_video {
-         display: hidden;
-     }
-
-     .home-video-wrapper {
-         display: hidden;
-     }
- }
-
- /* Large devices (desktops, 992px and up) */
- @media (min-width: 992px) {
-     .home_video {
-         display: hidden;
-     }
-
-     .home-video-wrapper {
-         display: hidden;
-     }
- }
-
- /* Extra large devices (large desktops, 1200px and up) */
- @media (min-width: 1200px) {
-     .home_video { 
-         display: none;
-     }
-
-     .home-video-wrapper {}
+    .mt-3 {
+         text-align: center;
+         margin-left: 90px;
+    }
  }

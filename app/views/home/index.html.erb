@@ -1,24 +1,46 @@
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-xs-12">
       <div class="home-display">
 
-      <div class="home-video-wrapper .container-fluid">
+      <!--
+      <div class="home-video-wrapper ">
         <%= video_tag "run.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
       </div> 
+      -->
 
-        <div class="home-content .container-fluid">
+        <div class="home-content ">
           <h1 class="display-4">Welcome to Move and Groove!</h1>
+          <hr>
           <p class="info"> According to the <a target="_blank" href="https://www.nhs.uk/live-well/exercise/">NHS</a>
-          strong evidence shows a strong correlation between physical activity and reducing the risk of developing several diseases like type 2 diabetes, cancer and cardiovascular disease. Move & Groove is a great way to keep track of your daily physical activity and measure your performance. 
+          strong evidence shows a strong correlation between physical activity and reducing the risk of developing several diseases like type 2 diabetes, cancer and cardiovascular disease. <strong><i>Move & Groove</i></strong> is a great way to keep track of your daily physical activity and measure your performance. 
           </p>
+          <hr/>
+          <!--
+          <div class="container text-center">
+          	<p>Be inspired.</p>
+            <div class="row">
+		          <div class = "quoteBox col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                <span class = "quote"></span>
+                <br>
+                <span class = "author"></span>
+              </div>
+		        </div>
+		        <button id="quote" class = "btn btn-default bg-danger qBtn">New Quote</button>
+          </div>
+          -->
+          <h2>Be inspired</h2>
+          <q>Whether you think you can, or you think you can’t, you’re right.</q>
+         <p><i>— Henry Ford, industrialist</i></p>
+          <hr>
 
-          <% if !user_signed_in? %>
+          
+        </div>
+        <% if !user_signed_in? %>
             <%= link_to('Login', new_user_session_path, role: 'button', class: 'btn btn-success btn-lg') %>
             <%= link_to('Register', new_user_registration_path, role: 'button', class: 'btn btn-primary btn-lg') %>
           <% end %>
-        </div>
       </div>
     </div>
   </div>

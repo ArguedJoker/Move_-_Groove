@@ -2,6 +2,8 @@
   "name": "untitled",
   "private": true,
   "dependencies": {
-    "node": "^13.6.0"
+    "git": "^0.1.5",
+    "node": "^13.6.0",
+    "rvm": "^0.3.2"
   }
 }

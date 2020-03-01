@@ -14,7 +14,7 @@ end
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
 # Use postgresql as the database for Active Record
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem "puma", ">= 3.12.3"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem "nokogiri", ">= 1.10.8"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

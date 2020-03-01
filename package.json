@@ -2,11 +2,11 @@
   "name": "untitled",
   "private": true,
   "dependencies": {
-    "git": "^0.1.5",
-    "node": "^13.6.0",
-    "rvm": "^0.3.2",
-    "mime": ">=1.4.1",
+    "concat-stream": ">=1.5.2",
     "debug": ">=2.6.9",
-    "concat-stream": ">=1.5.2"
+    "git": "^0.1.5",
+    "mime": ">=1.4.1",
+    "node": "^13.9.0",
+    "rvm": "^0.3.2"
   }
 }
